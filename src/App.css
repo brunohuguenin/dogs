@@ -3,6 +3,7 @@
 }
 
 body {
+  padding-top: 4rem;
   margin: 0;
   color: #333;
   --type-first: Helvetica, Arial, sans-serif;
@@ -20,6 +21,10 @@ ul, li {
   margin: 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -32,7 +37,7 @@ button, input {
   color: #333;
 }
 
-.conteiner {
+.container {
   max-width: 50rem;
   padding: 0 1rem;
   margin: 0 auto;
