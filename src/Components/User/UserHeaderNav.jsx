@@ -10,6 +10,12 @@ import useMedia from '../../Hooks/useMedia';
 
 const UserHeaderNav = () => {
   const { userLogout } = React.useContext(UserContext);
+  const navigate = useNavigate();
+  function handleLogout() {
+    userLogout();
+    navigate('/login');
+  }
+
   const mobile = useMedia('(max-width: 40rem)');
   const [mobileMenu, setMobileMenu] = React.useState(false);
 
@@ -47,7 +53,7 @@ const UserHeaderNav = () => {
           <SVGadicionar />
           {mobile && 'Adicionar Foto'}
         </NavLink>
-        <button onClick={userLogout}>
+        <button onClick={handleLogout}>
           <SVGsair />
           {mobile && 'Sair'}
         </button>
